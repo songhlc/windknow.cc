@@ -12,4 +12,6 @@ const router = new VueRouter({
 new Vue({
   router
 }).$mount('#app')
+router.push('home')
+
 // 了解多级别路由的使用,了解路由别名的作用

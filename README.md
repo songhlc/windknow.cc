@@ -1,5 +1,7 @@
 # windknow.cc
 一个基于vue2.0 开发的个人网站
+
+vue2.0 + vue-router2.0
 > A Vue.js project
 
 ## Build Setup

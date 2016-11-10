@@ -1,16 +1,24 @@
 <template>
-  <div id="bg" class="hello" @mousemove="mousemove">
+  <div id="bg" class="home" @mousemove="mousemove">
     <bubbles></bubbles>
-    <div>me</div>
+    <category>
+          <h5 class="text-center m-t-lg animated fadeInDown">菩提本无树 明镜亦非台 本来无一物 何处惹尘埃</h5>
+    </category>
+    <foot>
+
+    </foot>
   </div>
 </template>
 <script>
   import bubbles from '../components/bubbles.vue'
+  import category from '../components/category.vue'
+  import foot from '../components/foot.vue'
 
   export default {
-    name: 'Hello',
     components: {
-      bubbles
+      bubbles,
+      category,
+      foot
     },
     data () {
       return {
@@ -51,7 +59,7 @@
   a {
     color: #42b983;
   }
-  .hello{
+  .home{
     background-image: url(../assets/treebg.jpg);
     background-color: rgb(255, 255, 255);
     height: 600px;
