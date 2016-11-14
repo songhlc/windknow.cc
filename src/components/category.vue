@@ -6,12 +6,21 @@
         <li class="active"><a href="#home">首页</a></li>
         <li><a href="https://github.com/songhlc" target="_blank">Github</a></li>
         <li><a href="https://github.com/songhlc/blog/issues" target="_blank">博客</a></li>
-        <li><a href="#">关于我</a></li>
+        <li><a @click="aboutme">关于我</a></li>
       </ul>
     </nav>
     <slot></slot>
   </div>
 </template>
+<script>
+  export default {
+    methods: {
+      aboutme () {
+        window.alert('正在努力开发中!')
+      }
+    }
+  }
+</script>
 <style lang="less">
   .category{
     position: absolute;
