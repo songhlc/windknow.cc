@@ -2,7 +2,7 @@
   <div id="bg" class="home" @mousemove="mousemove">
     <bubbles></bubbles>
     <category>
-          <h5 class="text-center m-t-lg animated fadeInDown">菩提本无树 明镜亦非台 本来无一物 何处惹尘埃</h5>
+          <h5 class="text-center m-t-lg animated fadeInDown">友云采FED</h5>
     </category>
     <foot>
 

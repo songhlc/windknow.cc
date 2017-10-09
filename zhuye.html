@@ -1,57 +1,238 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
-    <meta name="apple-mobile-web-app-capable" content="no" />
-    <meta content="telephone=no" name="format-detection" />
-    <title>风知的个人世界</title>
-    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <style>
-        a {
-            color: #b7b7b7;
-        }
-        #top{
-            background-color: #000;
-        }
-        .bs-docs-nav .navbar-toggle .icon-bar {
-            background-color: #b6b6b6;
-        }
-    </style>
-</head>
-<body>
-<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="../" class="navbar-brand">风知</a>
-        </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">博客</a>
-                </li>
-                <li class="active">
-                    <a href="#">生活</a>
-                </li>
-                <li>
-                    <a href="#">我的简历</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<div class="container">
-    <h3 class="text-center animated fadeInUp">你是第一个看到这个网站的人哦!</h3>
-</div>
-</body>
-</html>
+<!DOCTYPE html><html><head><meta charset=UTF-8><meta http-equiv=Content-type content="text/html; charset=utf-8"><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-height,target-densitydpi=medium-dpi"><meta name=apple-mobile-web-app-capable content=no><meta content="telephone=no" name=format-detection><title>风知的个人世界</title><link href=//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css rel=stylesheet><link href=//cdn.bootcss.com/animate.css/3.5.2/animate.min.css rel=stylesheet><link rel=stylesheet href=//lexrus.com/fontdiao/fontdiao/css/fontdiao.css><style>body{
+  background-color: rgba(0,0,0,.2);
+}
+.pace-done .pace-activity:after,.pace-progress-inner:after, .pace:after, .pace-progress:after {
+  /* ******************************************************* */
+  /* Change the following line to update the welcome message */
+  /* ******************************************************* */
+  content: "Welcome";
+}
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  height: 100%;
+  width: 100%;
+}
+
+.pace-done .pace-progress {
+  animation: hideBorder 250ms ease-in-out forwards;
+  animation-delay: 575ms;
+}
+
+.pace-progress {
+  position: fixed;
+  z-index: 2000;
+  top: 50%;
+  left: 7.5%;
+  max-width: 85%;
+  border-top: 2px solid rgba(255,255,255,1);
+  margin-top: -2px;
+  bottom: 0;
+}
+
+.pace-activity {
+  width: 100%;
+  height: 50%;
+  position: fixed;
+}
+
+.pace-done .pace-activity:after,.pace-progress-inner:after, .pace:after, .pace-progress:after {
+  padding: 0;
+  display: block;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Noto Sans', serif;
+  font-size: 4.75rem;
+  text-align: center;
+}
+
+.pace-done.pace:after {
+  animation: fadeIn .05s ease-in-out forwards,
+  flyAway 700ms ease-in forwards;
+  animation-delay: 1.05s, 1.15s;
+}
+
+.pace:after {
+  top: 50%;
+  position: absolute;
+  margin-top: -3.7rem;
+  width: 100%;
+  color: rgba(255,255,255,0.0);
+}
+
+.pace-activity:after,.pace-progress-inner:after {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.pace-progress-inner {
+  height: 100px;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.pace .pace-activity:after, .pace .pace-progress-inner:after { display: none; }
+
+.pace-done .pace-activity:after {
+  display: block;
+  animation: slideUp 1.05s ease-in-out forwards,
+  fadeOut .1s ease-out forwards;
+  animation-delay: 0s, 1.05s;
+}
+
+.pace-activity:after {
+  margin-bottom: -1.93rem;
+  bottom: 1.93rem;
+}
+
+.pace-done .pace-progress-inner:after {
+  display: block;
+  animation: slideDown 1.05s ease-in-out forwards,
+  fadeOut .1s ease-out forwards;
+  animation-delay: 0s, 1.05s;
+}
+
+/* ***************************************** */
+/* Shadow                                    */
+/* ***************************************** */
+.pace-progress {
+  perspective: 1000px;
+  perspective-origin: 50% 80%;
+}
+.pace-progress:after {
+  color: transparent;
+  text-shadow: 0 0 15px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: rotateX(75deg);
+  position: fixed;
+  bottom: 2%;
+  height: 8rem;
+  width: 100%;
+}
+.pace-done .pace-progress:after {
+  animation: fadeInHalf .5s ease-in-out forwards,
+  shadowFlyAway 700ms ease-in forwards;
+  animation-delay: .6s, 1.15s;
+}
+
+
+
+/* ***************************************** */
+/* Animation                                 */
+/* ***************************************** */
+
+@keyframes fadeIn {
+  from { color: rgba(255,255,255,0.0); }
+  to   { color: rgba(255,255,255,1.0); }
+}
+@keyframes fadeOut {
+  from { color: rgba(255,255,255,1.0); }
+  to   { color: rgba(255,255,255,0.0); }
+}
+@keyframes fadeInHalf {
+  from { opacity: 0; }
+  to   { opacity: .5; }
+}
+@keyframes shadowFlyAway {
+  0% {
+    text-shadow: 0 0 15px rgba(0,0,0,0.25);
+    opacity: .5;
+    letter-spacing: 0.05rem;
+  }
+  100% {
+    text-shadow: 0 0 35px rgba(0,0,0,0.25);
+    opacity: 0;
+    letter-spacing: 2rem;
+  }
+}
+@keyframes flyAway {
+  from {
+    letter-spacing: 0.05rem;
+    opacity: 1;
+    font-size: 4.75rem;
+    margin-top: -3.6rem;
+  }
+  to {
+    letter-spacing: 2rem;
+    opacity: 0;
+    font-size: 5.5rem;
+    margin-top: -3.95rem;
+  }
+}
+
+@keyframes hideBorder {
+  0% { border-top: 2px solid rgba(255,255,255,1); }
+  100% { border-top: 2px solid rgba(255,255,255,.01); }
+}
+
+@keyframes slideDown {
+  from { margin-top: -6.1rem; }
+  to   { margin-top: -3.7rem; }
+}
+
+
+@keyframes slideUp {
+  from { height: 0rem; }
+  to   { height: 3.75rem; }
+}</style><link href=http://windknowcc.oss-cn-hangzhou.aliyuncs.com/static/css/app.6fe3278ae696fdc1fba579680aabf397.css rel=stylesheet></head><body><div class="pace pace-running"><div data-progress=0 data-progress-text=0% style="width: 0%" class=pace-progress><div class=pace-progress-inner></div></div><div class=pace-activity></div></div><div id=app><router-view></router-view></div><script>//document.addEventListener('DOMContentLoaded', init, false)
+
+function init() {
+
+  var loading = {
+    finalWidth: window.innerWidth, // Match css width (85%)
+    settings: [
+      { increment: 1, interval: 3, stop: (window.innerWidth*.85) * .05 },
+      { increment: 5, interval: 2, stop: (window.innerWidth*.85) }
+    ],
+    pace: document.querySelector('.pace'),
+    paceProgress: document.querySelector('.pace-progress'),
+
+    setup: function(id) {
+      this.settingID = id || 0;
+      // Set first iteration so that i can be set to the last width if necessary
+      this.firstIteration = true;
+      if (this.settings[this.settingID]) {
+        var i = this.settings[this.settingID].increment;
+        this.intervalID = window.setInterval(function() {
+          if (this.firstIteration) {
+            delete this.firstIteration;
+            i = this.settings[this.settingID - 1]
+              ? this.settings[this.settingID -1].stop
+              : 0;
+          }
+          i = i + this.settings[this.settingID].increment;
+          this.paceProgress.style.width = i + 'px';
+          if (i > this.settings[this.settingID].stop) { this.queueNext(); }
+        }.bind(this), this.settings[this.settingID].interval);
+      } else { this.finish(); }
+    },
+
+    finish: function() {
+      this.cancel();
+      this.pace.classList.add('pace-done');
+      this.pace.classList.remove('pace-running');
+      setTimeout(function(){
+        document.getElementById('app').classList.add('animated');
+      },1500)
+
+    },
+
+    cancel: function() {
+      window.clearInterval(this.intervalID);
+      this.intervalID = undefined;
+    },
+
+    queueNext: function() {
+      this.cancel();
+      this.settingID += 1;
+      this.setup(this.settingID);
+    }
+  };
+
+  loading.setup();
+}</script><script type=text/javascript src=http://windknowcc.oss-cn-hangzhou.aliyuncs.com/static/js/manifest.3dcdee2a2938aea8a6c2.js></script><script type=text/javascript src=http://windknowcc.oss-cn-hangzhou.aliyuncs.com/static/js/vendor.6dd96170b03a732d4e4f.js></script><script type=text/javascript src=http://windknowcc.oss-cn-hangzhou.aliyuncs.com/static/js/app.8cee58dc25141ffc9a5f.js></script></body></html>
